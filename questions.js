@@ -1,8 +1,8 @@
 var questions = [
     {
-        title: "Question 1",
-        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-        answer: "Choice 1"
+        title: "Which of these is not one of the 3 building blocks of the web?",
+        choices: ["Linux", "HTML", "Javascript", "CSS"],
+        answer: "Linux"
     },
     {
         title: "Question 2",
@@ -69,7 +69,7 @@ function incorrect() {
 
 function startPage(){
     create("h1", "main", "Coding Quiz Challenge", "startHead");
-    create("p", "main", "Welcome to the coding quiz challenge blah blah blah blah", "startText");
+    create("p", "main", "Welcome to the coding quiz challenge click the button below to begin. The object is to finish with as much time remaining as possible while avoiding penalties for wrong answers", "startText");
     create("button", "main", "Start The Quiz", "startBtn");
 }
 
@@ -214,11 +214,11 @@ function q5check() {
     var userAns = event.target.textContent;
     if (userAns === ans5) {
         correct();
-        // finalscore();
+        finalscore();
     }
     else {
         incorrect();
-        // finalscore();(
+        finalscore();
     }
 }
 var josh = document.querySelectorAll("#test");
@@ -238,6 +238,14 @@ function setTime () {
             clearInterval(timerInterval);
           }
     }, 1000)
+}
+function finalscore() {
+    removePrev();
+    document.querySelector("#result").textContent = "";
+    // document.querySelector("#main").textContent = "High Scores"
+    var initials = prompt("Enter Your Initials")
+    localStorage.setItem("HighScore", [initials, secondsLeft]);
+    document.querySelector("#main").textContent = "High Score: " + JSON.stringify(localStorage.HighScore);
 }
 // console.log(josh.textContent);
 // setTime();
