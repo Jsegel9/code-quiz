@@ -31,6 +31,7 @@ var questions = [
     // more questions here
 ];
 
+
 function create(element, place, text, elClass) {
     var createEl = document.createElement(element);
     createEl.textContent = text;
@@ -61,6 +62,7 @@ function correct() {
 
 function incorrect() {
     create("h2", "result", "Incorrect", "incorrect result");
+    secondsLeft-= 15;
 }
 
 
@@ -78,6 +80,7 @@ function startClick() {
     ques1El.textContent = questions[0].title;
     textEl.textContent = "";
     btn1.style.display = "none";
+    setTime();
     question1();      
 }
 
@@ -215,6 +218,28 @@ function q5check() {
     }
     else {
         incorrect();
-        // finalscore();
+        // finalscore();(
     }
 }
+var josh = document.querySelectorAll("#test");
+var secondsLeft = 75;
+
+function setTime () {
+    var timerInterval = setInterval(function () {
+        secondsLeft--;
+        josh.textContent = "Time: " + secondsLeft;
+        // var josh2 = josh.textContent;
+        // josh2.append("test" + secondsLeft)
+        // josh.append(josh2);
+        // console.log(josh.textContent);
+        document.querySelector("#test").textContent= "";
+        document.querySelector("#test").append(josh.textContent);
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+          }
+    }, 1000)
+}
+// console.log(josh.textContent);
+// setTime();
+// console.log(timeEl);
+// console.log(document.querySelector("#test"));
