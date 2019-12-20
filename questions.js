@@ -52,13 +52,42 @@ function startClick() {
             create("button", "buttons", questions[0].choices[i], "q1as button");
             var ansBtn = document.querySelectorAll("#buttons")[0];            
     }
-    ansBtn.addEventListener("click", checkAnswer)  
+    ansBtn.addEventListener("click", function () {
+        var userAns = event.target.textContent;
+        if (userAns === ans1) {
+           create("h2", "result", "Correct", "correct result");
+           question2();     
+        }
+        else {
+            create("h2", "result", "Incorrect", "incorrect result");
+            question2();
+        }
+        // console.log(userAns);
+        // console.log(ans1);
+    })  
+    
+}
+
+function question2() {
+    var ques2El = document.querySelector(".startHead");
+    var lastAns = document.querySelector(".result");
+
+    // lastAns.style.display = "none"; 
+    ques2El.textContent = questions[1].title;
+    console.log("made it to q2");
 }
 
 
-function checkAnswer(event) {
-    console.log(event.target.textContent);
-}
+// function checkAnswer(event) {
+//     var userAns = event.target.textContent;
+//     var ans1 = questions[0].answer;
+//     //add other variables for other answers
+//     if ()
+
+//     console.log(userAns);
+//     console.log(ans1);
+    // console.log(event.target.textContent);
+// }
 // function myfunction() {
     // console.log("test");
 // }
