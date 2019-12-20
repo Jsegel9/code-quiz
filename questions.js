@@ -24,13 +24,12 @@ function create(element, place, text, elClass) {
     target.appendChild(createEl);
     }
 
-// function create2(element, place, text, elClass) {
-//     var createEl = document.createElement(element);
-//     createEl.textContent = text;
-//     createEl.className = elClass;
-//     var target = document.getElementById(place);
-//     target.appendChild(createEl);
-// }
+function removePrev() {
+    var prevAns = document.querySelectorAll("#buttons");
+    while (prevAns[0].hasChildNodes()) {
+        prevAns[0].removeChild(prevAns[0].firstChild);
+    }
+}
 
 function startPage(){
     create("h1", "main", "Coding Quiz Challenge", "startHead");
@@ -70,11 +69,9 @@ function startClick() {
 
 function question2() {
     var ques2El = document.querySelector(".startHead");
-    var lastAns = document.querySelector(".result");
-
-    // lastAns.style.display = "none"; 
     ques2El.textContent = questions[1].title;
-    console.log("made it to q2");
+    
+    removePrev();
 }
 
 
