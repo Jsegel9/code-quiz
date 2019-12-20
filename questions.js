@@ -35,7 +35,7 @@ function create(element, place, text, elClass) {
 function startPage(){
     create("h1", "main", "Coding Quiz Challenge", "startHead");
     create("p", "main", "Welcome to the coding quiz challenge blah blah blah blah", "startText");
-    create("button", "main", "Start The Quiz", "startBtn");
+    create("button", "buttons", "Start The Quiz", "startBtn");
 }
 
 function startClick() {
@@ -44,15 +44,26 @@ function startClick() {
     var btn1 = document.querySelector(".startBtn");
     var ans1 = questions[0].answer;
     // var abc = document.querySelector(".q1as")
-   
-
     ques1El.textContent = questions[0].title;
     textEl.textContent = "";
     btn1.style.display = "none";
-    console.log(ans1);
+    // console.log(ans1);
         for (var i = 0; i < questions[0].choices.length; i++) {
-           create("button", "main", questions[0].choices[i], "q1as button"); 
+            // var ansBtn = document.querySelectorAll(".q1as");
+            create("button", "buttons", questions[0].choices[i], "q1as button");
+             var ansBtn = document.querySelectorAll(".q1as");
+            //  console.log(ansBtn);
     }
+    // var posAns = ansBtn;
+    // console.log(posAns[0].textContent);
 
+    // console.log(ansBtn[0].textContent);
+    // console.log(ansBtn[0]);
+    // ansBtn.onclick = myfunction;
+    // ansBtn.addEventListener("click", myfunction);
     // console.log();
 }
+// function myfunction() {
+    // console.log("test");
+// }
+// console.log(ansBtn);
