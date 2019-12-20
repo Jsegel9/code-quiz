@@ -1,6 +1,6 @@
 # code-quiz
 Assignment 4
-
+## Description
 
 ## credits
 [W3 Schools RemoveChild](https://www.w3schools.com/jsref/met_node_removechild.asp)
@@ -27,5 +27,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.  
 ## Contributing
-Feel free to use this github repository to build your own portfolio site. If you have any improvements or contributions you wild like to make please contact me at <Segeljosh@gmail.com>
+Feel free to use this github repository to build your own Code Quiz. If you have any improvements or contributions you wild like to make please contact me at <Segeljosh@gmail.com>
 
