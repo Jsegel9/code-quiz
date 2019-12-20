@@ -5,19 +5,19 @@ var questions = [
         answer: "Linux"
     },
     {
-        title: "Question 2",
-        choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
-        answer: "Answer 3"
+        title: "In Jquery what does $ represent",
+        choices: ["A String", "An Object", "A Function", "None of the Above"],
+        answer: "A Function"
     },
     {
-        title:"Question 3",
-        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"],
-        answer: "Choice 2"
+        title:"What word refers to Javascripts tendency to read line by line in order?",
+        choices: ["Asynchronous", "Synchronous", "Ordered", "Scripted"],
+        answer: "Synchronous"
     },
     {
-        title: "Question 4",
-        choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
-        answer: "Answer 4"
+        title: "What is Debugging",
+        choices: ["Calling An Exterminator", "Untapping a Phone Line", "A Dance", "Reviewing Your Code fo Errors"],
+        answer: "Reviewing Your Code fo Errors"
     },
     {
         title: "Question 5",
