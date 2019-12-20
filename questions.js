@@ -138,6 +138,7 @@ var ansBtn3 = document.querySelectorAll(".button");
 
 }
 function q1check () {
+    event.stopPropagation();
     var ans1 = questions[0].answer;
     var userAns1 = event.target.textContent;
         // console.log(userAns1);
@@ -150,10 +151,10 @@ function q1check () {
         // else if (event.target.className === "buttonarea") {
         //     create("h2", "result", "test", "result")
         // }
-        else {
-            create("h2", "result", "Incorrect", "incorrect result");
-            question2();
-        }
+        // else {
+        //     create("h2", "result", "Incorrect", "incorrect result");
+        //     question2();
+        // }
 }
 
 function question2() {
@@ -188,6 +189,7 @@ ansBtn2.addEventListener("click", q2check);
 
 }
 function q2check() {
+    event.stopPropagation();
     var ans2 = questions[1].answer;
     var userAns = event.target.textContent;
     // console.log(userAns);
