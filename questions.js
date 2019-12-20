@@ -9,6 +9,10 @@ var questions = [
         choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
         answer: "Answer 3"
     },
+
+
+
+
     // more questions here
 ];
 
@@ -35,5 +39,20 @@ function startPage(){
 }
 
 function startClick() {
-    console.log("work")
+    var ques1El = document.querySelector(".startHead");
+    var textEl = document.querySelector(".startText");
+    var btn1 = document.querySelector(".startBtn");
+    var ans1 = questions[0].answer;
+    // var abc = document.querySelector(".q1as")
+   
+
+    ques1El.textContent = questions[0].title;
+    textEl.textContent = "";
+    btn1.style.display = "none";
+    console.log(ans1);
+        for (var i = 0; i < questions[0].choices.length; i++) {
+           create("button", "main", questions[0].choices[i], "q1as button"); 
+    }
+
+    // console.log();
 }
