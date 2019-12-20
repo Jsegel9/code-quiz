@@ -12,10 +12,24 @@ var questions = [
     // more questions here
 ];
 
-function create(element, place, text) {
+function create(element, place, text, elClass) {
     var createEl = document.createElement(element);
     createEl.textContent = text;
+    createEl.className = elClass;
     var target = document.getElementById(place);
     target.appendChild(createEl);
     }
- 
+
+// function create2(element, place, text, elClass) {
+//     var createEl = document.createElement(element);
+//     createEl.textContent = text;
+//     createEl.className = elClass;
+//     var target = document.getElementById(place);
+//     target.appendChild(createEl);
+// }
+
+function startPage(){
+    create("h1", "main", "Coding Quiz Challenge", "startHead");
+    create("p", "main", "Welcome to the coding quiz challenge blah blah blah blah", "startText");
+    create("button", "main", "Start The Quiz", "startBtn");
+}
