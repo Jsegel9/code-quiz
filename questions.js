@@ -11,3 +11,11 @@ var questions = [
     },
     // more questions here
 ];
+
+function create(element, place, text) {
+    var createEl = document.createElement(element);
+    createEl.textContent = text;
+    var target = document.getElementById(place);
+    target.appendChild(createEl);
+    }
+ 
