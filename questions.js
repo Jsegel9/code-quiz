@@ -33,3 +33,7 @@ function startPage(){
     create("p", "main", "Welcome to the coding quiz challenge blah blah blah blah", "startText");
     create("button", "main", "Start The Quiz", "startBtn");
 }
+
+function startClick() {
+    console.log("work")
+}
