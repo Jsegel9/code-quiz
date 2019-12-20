@@ -31,6 +31,19 @@ function removePrev() {
     }
 }
 
+function clrResult() {
+    setUp = setTimeout(clrPrev, 2000)
+}
+
+function clrPrev() {
+    var PrevResult = document.querySelector("#result");
+    PrevResult.removeChild(PrevResult.firstChild);
+}
+// function clrSetup() {
+    // setUp = setTimeout(clrPrev, 2000)
+// }
+
+
 function startPage(){
     create("h1", "main", "Coding Quiz Challenge", "startHead");
     create("p", "main", "Welcome to the coding quiz challenge blah blah blah blah", "startText");
@@ -72,6 +85,7 @@ function question2() {
     ques2El.textContent = questions[1].title;
     
     removePrev();
+    clrResult();
 }
 
 
